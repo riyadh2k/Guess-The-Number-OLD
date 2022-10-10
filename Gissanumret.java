@@ -8,7 +8,7 @@ public class Gissanumret {
 		return 1 + (int)(100 * Math.random());
 	}
 	public static  void guessingNumberGame() {
-        // Scanner Class
+       
 		Scanner sc = new Scanner(System.in);
        
        
