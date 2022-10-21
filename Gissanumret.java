@@ -19,10 +19,15 @@ public class Gissanumret {
         while(true) {
           System.out.println("Enter your guess (1-100):");
           
-          int Guess = sc.nextInt();
+          int guess = sc.nextInt();
           tries++;
           
-          if (Guess == number) {
+         higherOrLower(number, guess, tries);
+          
+          } 
+	}
+	static void higherOrLower(int number, int guess, int tries){
+		if (guess == number) {
             System.out.println("Correct! You Win!");
             System.out.println("It took you " + tries + " tries");
             System.out.println("---------------------------");
@@ -30,14 +35,12 @@ public class Gissanumret {
             number = getRandom();          
             
           }
-          else if(number > Guess) {
+          else if(number > guess) {
             System.out.println("Nope! The number is higher. Guess again.");
           }
           else {
             System.out.println("Nope! The number is lower. Guess again.");
           }
-          
-        } 
 	}
  
 
