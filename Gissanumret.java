@@ -8,7 +8,7 @@ public class Gissanumret {
 		return 1 + (int)(100 * Math.random());
 	}
 	public static  void guessingNumberGame() {
-       
+        
 		Scanner sc = new Scanner(System.in);
        
        
@@ -19,15 +19,10 @@ public class Gissanumret {
         while(true) {
           System.out.println("Enter your guess (1-100):");
           
-          int guess = sc.nextInt();
+          int Guess = sc.nextInt();
           tries++;
           
-         higherOrLower(number, guess, tries);
-          
-          } 
-	}
-	static void higherOrLower(int number, int guess, int tries){
-		if (guess == number) {
+          if (Guess == number) {
             System.out.println("Correct! You Win!");
             System.out.println("It took you " + tries + " tries");
             System.out.println("---------------------------");
@@ -35,12 +30,14 @@ public class Gissanumret {
             number = getRandom();          
             
           }
-          else if(number > guess) {
+          else if(number > Guess) {
             System.out.println("Nope! The number is higher. Guess again.");
           }
           else {
             System.out.println("Nope! The number is lower. Guess again.");
           }
+          
+        } 
 	}
  
 
@@ -51,4 +48,5 @@ public class Gissanumret {
         
     }
 }
+
 
